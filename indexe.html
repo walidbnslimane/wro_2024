@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Wro 2024</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="styl.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="row justify-content-center align-items-center g-2">
+                <div class="col-12 text-center my-3">
+                   
+                </div>
+                <div class="col-12">
+                    <div class="map" id="map_elementary">
+                        <div class="map_elementary_vegetables"></div>
+                        <div class="map_elementary_vegetables"></div>
+                        <div class="map_elementary_vegetables"></div>
+                        <div class="map_elementary_vegetables"></div>
+                        <div id="map_elementary_green_and_dirts"></div>
+                        <img class="img-fluid" src="map_junior (1).jpg" alt="Map Elementary">
+                    </div>
+                </div>
+                <div class="ook">
+                    <button type="button" onclick="random()">Randomize</button>
+                    <button type="button" onclick="startChrono()">Start chrono</button>
+                    <button type="button" onclick="stopChrono()">Stop chrono</button>
+                    <button type="button" onclick="screenshot()">Save Capture</button>
+                    <button type="reset" onclick="resetAll()">Reset all</button>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-md-6 half">
+                            <h1 class="lm">Points Calculator</h1>
+                            <form id="calculatorForm">
+                                <div class="form-group">
+                                    <label for="redComplete">Lake or green element completely in a green park area :</label>
+                                    <select id="redComplete">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="redPartial">Lake or green element partly in a green park area:</label>
+                                    <select id="redPartial">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                                <div class="containere">
+                                        <div class="form-group">
+                                            <label for="redCompletee">Green starter set completely in a grey area of a house :</label>
+                                            <select id="redCompletee">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="redPartiale">Green starter set partly in grey area of a house :</label>
+                                            <select id="redPartiale">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="redPartiale">Additionally: Green starter set is inside the house and door closed:</label>
+                                            <select id="additionalPoints1">
+                                                <option value="0">no</option>
+                                                <option value="8">yes</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="eBike1">First E-Bike is completely inside the charging area A:</label>
+                                            <select id="eBike1">
+                                                <option value="0">no</option>
+                                                <option value="7">yes</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="eBike2">Second E-Bike is completely inside the charging area A:</label>
+                                            <select id="eBike2">
+                                                <option value="0">no</option>
+                                                <option value="7">yes</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cableComplete">Cable is completely in the charging area B:</label>
+                                            <select id="cableComplete">
+                                                <option value="0">no</option>
+                                                <option value="11">yes</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cableTouching">Cable is touching the charging area B:</label>
+                                            <select id="cableTouching">
+                                                <option value="0">no</option>
+                                                <option value="5">yes</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="apartmentHouse1">First Apartment house is not damaged or moved:</label>
+                                            <select id="apartmentHouse1">
+                                                <option value="0">no</option>
+                                                <option value="3">yes</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="apartmentHouse2">Second Apartment house is not damaged or moved:</label>
+                                            <select id="apartmentHouse2">
+                                                <option value="0">no</option>
+                                                <option value="3">yes</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="fence1">First Fence is not damaged or moved:</label>
+                                            <select id="fence1">
+                                                <option value="0">no</option>
+                                                <option value="3">yes</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="fence2">Second Fence is not damaged or moved:</label>
+                                            <select id="fence2">
+                                                <option value="0">no</option>
+                                                <option value="3">yes</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="fence3">Third Fence is not damaged or moved:</label>
+                                            <select id="fence3">
+                                                <option value="0">no</option>
+                                                <option value="3">yes</option>
+                                            </select>
+                                        </div>
+                            </form>
+                         </div>
+                            <div id="result">
+                                <h2>Total Points: <span id="totalPoints">0</span></h2>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="half chrono">
+                                <div id="chronometer">
+                                    <p class="kj" id="time">00:00</p>
+                                </div>
+                                <audio id="alarmSound" src="alarm.mp3"></audio>
+                            </div>
+                            <div class="stats">
+                                <h3>Results</h3>
+                                <p id="pointsOverTime">0 points in 00:00</p>
+                                <div id="remark" class="remark">
+                                    <h2 class="ok"> <span id="remarkText"></span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>© Copyright 2024  |  All Rights Reserved by <a href="https://dextertaha.github.io/Taha-Taidi-Laamiri-portfolio/" target="_blank">Walid ben slimane</a></p>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.19.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="scripto.js"></script>
+</body>
+</html>
