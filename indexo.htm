@@ -12,9 +12,7 @@
         <div class="container">
             <div class="row justify-content-center align-items-center g-2">
                 <div class="col-12 text-center my-3">
-                    <button type="button" class="btn btn-primary" onclick="random()">Randomize</button>
-                    <button type="reset" class="btn btn-primary">Reset</button>
-                    <button type="button" class="btn btn-primary" onclick="screenshot()">Save Capture</button>
+                   
                 </div>
                 <div class="col-12">
                     <div class="map" id="map_elementary">
@@ -26,10 +24,17 @@
                         <img class="img-fluid" src="map_elementary (1).jpg" alt="Map Elementary">
                     </div>
                 </div>
+                <div class="ook">
+                    <button type="button" onclick="random()">Randomize</button>
+                    <button type="button" onclick="startChrono()">Start chrono</button>
+                    <button type="button" onclick="stopChrono()">Stop chrono</button>
+                    <button type="button" onclick="screenshot()">Save Capture</button>
+                    <button type="reset" onclick="resetAll()">Reset all</button>
+                </div>
                 <div class="col-12">
                     <div class="row">
                         <div class="col-md-6 half">
-                            <h1 class="okk">Points Calculator</h1>
+                            <h1 class="lm">Points Calculator</h1>
                             <form id="calculatorForm">
                                 <div class="form-group">
                                     <label for="redComplete">Red vegetable completely in market area :</label>
@@ -113,14 +118,10 @@
                         </div>
                         <div class="col-md-6">
                             <div class="half chrono">
-                                <h2>Chronometer</h2>
                                 <div id="chronometer">
-                                    <p id="time">00:00</p>
+                                    <p class="kj" id="time">00:00</p>
                                 </div>
                                 <audio id="alarmSound" src="alarm.mp3"></audio>
-                                <button type="button" class="btn btn-primary" onclick="startChrono()">Start</button>
-                                <button type="button" class="btn btn-danger" onclick="stopChrono()">Stop</button>
-                                <button type="button" class="btn btn-secondary" onclick="resetChrono()">Reset</button>
                             </div>
                             <div class="stats">
                                 <h3>Results</h3>
