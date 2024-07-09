@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Points Calculator and Map</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="row justify-content-center align-items-center g-2">
+                <div class="col-12 text-center my-3">
+                    <button type="button" class="btn btn-primary" onclick="random()">Randomize</button>
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                    <button type="button" class="btn btn-primary" onclick="screenshot()">Save Capture</button>
+                </div>
+                <div class="col-12">
+                    <div class="map" id="map_elementary">
+                        <div class="map_elementary_vegetables"></div>
+                        <div class="map_elementary_vegetables"></div>
+                        <div class="map_elementary_vegetables"></div>
+                        <div class="map_elementary_vegetables"></div>
+                        <div id="map_elementary_green_and_dirts"></div>
+                        <img class="img-fluid" src="map_elementary (1).jpg" alt="Map Elementary">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-md-6 half">
+                            <h1 class="okk">Points Calculator</h1>
+                            <form id="calculatorForm">
+                                <div class="form-group">
+                                    <label for="redComplete">Red vegetable completely in market area :</label>
+                                    <select id="redComplete">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="redPartial">Red vegetable partly in the market area	:</label>
+                                    <select id="redPartial">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="yellowComplete">Yellow vegetable completely in the compost area	:</label>
+                                    <select id="yellowComplete">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="yellowPartial">Yellow vegetable partly in the compost area :</label>
+                                    <select id="yellowPartial">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="waterGreen"> Water element is touching the green square around a green vegetable and the green vegetable is still touching the green square as well (max. one water element per green square counts :</label>
+                                    <select id="waterGreen">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="earthBlock">Earth block is no longer touching any green square area	:</label>
+                                    <select id="earthBlock">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="chicken">Chicken is not damaged or moved :</label>
+                                    <select id="chicken">
+                                        <option value="0">no</option>
+                                        <option value="1">yes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fence">Fence is not damaged or moved :</label>
+                                    <select id="fence">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <div id="result">
+                                <h2>Total Points: <span id="totalPoints">0</span></h2>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="half chrono">
+                                <h2>Chronometer</h2>
+                                <div id="chronometer">
+                                    <p id="time">00:00</p>
+                                </div>
+                                <audio id="alarmSound" src="alarm.mp3"></audio>
+                                <button type="button" class="btn btn-primary" onclick="startChrono()">Start</button>
+                                <button type="button" class="btn btn-danger" onclick="stopChrono()">Stop</button>
+                                <button type="button" class="btn btn-secondary" onclick="resetChrono()">Reset</button>
+                            </div>
+                            <div class="stats">
+                                <h3>Results</h3>
+                                <p id="pointsOverTime">0 points in 00:00</p>
+                                <div id="remark" class="remark">
+                                    <h2 class="ok"> <span id="remarkText"></span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>© Copyright 2024  |  All Rights Reserved by <a href="https://dextertaha.github.io/Taha-Taidi-Laamiri-portfolio/" target="_blank">Walid ben slimane</a></p>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.19.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

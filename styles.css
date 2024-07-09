@@ -1,0 +1,193 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+/* main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+.map {
+    position: relative;
+    width: 1120px;
+    height: 600px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.map img {
+    width: 1150px;
+    height: 100%;
+    /* object-fit: cover; */
+}
+/* .map_elementary_vegetables {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #0f0;
+    border-radius: 50%;
+} */
+/* #map_elementary_green_and_dirts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: #0f0;
+    border-radius: 50%;
+} */
+/* .form-group {
+    margin-bottom: 20px;
+} */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+button[type="button"] {
+    margin-top: 20px;
+}
+#result {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+.footer {
+    padding: 10px;
+    text-align: center;
+}
+
+.footer a:hover {
+    color: #ccc;
+}
+.container{
+    max-width: 1170px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+/* Button styles */
+button[type="button"], button[type="reset"] {
+    /* Change button size */
+    padding: 10px 20px;
+    font-size: 16px;
+    /* Change button colors */
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /* Make buttons inline-block elements to align them in one line */
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  button[type="button"]:hover, button[type="reset"]:hover {
+    background-color: #23527c;
+  }
+  
+  button[type="button"]:active, button[type="reset"]:active {
+    background-color: #1d4a7a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+/* .lop{
+    position: 
+    left: 70px;
+} */
+  /* Custom styles */
+/* .container {
+    max-width: 1200px;
+} */
+.half {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 15px;
+}
+button[type="button"], button[type="reset"] {
+    margin: 5px;
+}
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#totalPoints {
+    font-weight: bold;
+    color: #337ab7;
+}
+.chrono {
+    text-align: center;
+}
+.chrono h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.chrono button {
+    margin-top: 20px;
+}
+.lop{
+    text-align: center;
+}
+.half.chrono{
+    max-height: 270px;
+}
+.stats{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    max-height: 270px;
+
+}
+.ok{
+    color:#e62121;
+}
+.okk{
+    text-align: center;
+}
+/* #stats {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#stats h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#pointsOverTime {
+    font-size: 1.25rem;
+    color: #337ab7;
+} */
